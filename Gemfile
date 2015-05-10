@@ -30,6 +30,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Puma as the app server
 gem 'puma'
 
+# Work with StackOverflow
+gem 'ruby-stackoverflow'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
