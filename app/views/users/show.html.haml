@@ -1,1 +1,16 @@
-%h1= @user.display_name.html_safe
+.row.jumbotron
+  = image_tag @user.profile_image, alt: @user.display_name, class: 'col-xs-3'
+  .col-xs-9.text-right
+    .row
+      .profile
+        %h1= link_to @user.display_name.html_safe, @user.link
+        %h2
+          = image_tag 'https://sstatic.net/stackexchange/img/logos/so/so-icon.png'
+          = @user.reputation
+        %h3
+          %ul.badges.list-unstyled.list-inline
+            - @user.badge_counts.each do |color, count|
+              - next unless count > 0
+              %li{class: color}
+                %span &#9679;
+                #{count}

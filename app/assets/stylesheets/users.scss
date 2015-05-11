@@ -1,3 +1,19 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.profile {
+  h1, h2, h3 { margin: 10px 0; }
+  h2 {
+    font-size: 42px;
+
+    img {
+      height: 42px;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.badges {
+  color: #888;
+
+  .bronze span { color: #CC9966; }
+  .silver span { color: #C5C5C5; }
+  .gold   span { color: #FFCC00; }
+}
