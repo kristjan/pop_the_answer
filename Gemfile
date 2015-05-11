@@ -5,6 +5,8 @@ gem 'rails', '4.2.1'
 gem 'pg'
 gem 'puma'
 
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.0'
