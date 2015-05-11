@@ -37,6 +37,9 @@ gem 'ruby-stackoverflow'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Autotest is wonderful
+  gem 'autotest-rails'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -48,6 +51,7 @@ group :development, :test do
 
   # Use RSpec for testing
   gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-autotest', git: 'https://github.com/rspec/rspec-autotest.git', ref: '41a6410'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

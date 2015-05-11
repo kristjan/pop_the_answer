@@ -1,6 +1,15 @@
+GIT
+  remote: https://github.com/rspec/rspec-autotest.git
+  revision: 41a64100339fa75baf16e87ccb4ffe24336bf5a0
+  ref: 41a6410
+  specs:
+    rspec-autotest (1.0.1)
+      rspec-core (>= 2.99.0.beta1, < 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    ZenTest (4.11.0)
     actionmailer (4.2.1)
       actionpack (= 4.2.1)
       actionview (= 4.2.1)
@@ -37,6 +46,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    autotest-rails (4.2.1)
+      ZenTest (~> 4.5)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -184,6 +195,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autotest-rails
   byebug
   coffee-rails (~> 4.1.0)
   foreman
@@ -193,6 +205,7 @@ DEPENDENCIES
   pg
   puma
   rails (= 4.2.1)
+  rspec-autotest!
   rspec-rails (~> 3.0)
   ruby-stackoverflow
   sass-rails (~> 5.0)
