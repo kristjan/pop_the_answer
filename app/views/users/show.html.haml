@@ -17,17 +17,17 @@
 .row.summary.text-center
   .col-md-3
     .well.well-lg
-      %h2= @questions.size
+      %h2= @user.questions.size
       %h3 Questions Asked
   .col-md-3
     .well.well-lg
-      %h2= @answers.size
+      %h2= @user.answers.size
       %h3 Questions Answered
   .col-md-3
     .well.well-lg
-      %h2= current_streak(@answers)
+      %h2= current_streak(@user.answers)
       %h3 Day Answer Streak
   .col-md-3
     .well.well-lg
-      %h2= longest_streak(@answers)
+      %h2= longest_streak(@user.answers)
       %h3 Longest Streak
