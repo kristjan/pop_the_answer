@@ -23,3 +23,18 @@
   h2 { font-size: 80px; }
   h3 { text-transform: uppercase; }
 }
+
+.history {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 2em;
+  margin-top: 10px;
+}
+
+.day {
+  padding: 5px 0 5px;
+
+  .answers {
+    border-left: 1px solid #CCC;
+  }
+}

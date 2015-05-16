@@ -6,6 +6,12 @@ module UsersHelper
     end.sort.uniq.reverse
   end
 
+  def answers_by_date(answers)
+    answers.group_by do |answer|
+      answer.creation_date.to_time.in_time_zone(TIME_ZONE).to_date
+    end.sort_by(&:first).reverse
+  end
+
   def current_streak(answers)
     dates = answer_dates(answers)
     return 0 if dates.empty?

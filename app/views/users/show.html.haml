@@ -31,3 +31,12 @@
     .well.well-lg
       %h2= longest_streak(@user.answers)
       %h3 Longest Streak
+
+.history
+  - answers_by_date(@user.answers).each do |date, answers|
+    .row.day
+      .col-md-2= date
+      %ul.answers.list-unstyled.col-md-10
+        - answers.each do |answer|
+          - question = @answered[answer.question_id]
+          %li= link_to question.title, question.link
