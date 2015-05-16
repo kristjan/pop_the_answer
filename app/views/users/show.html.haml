@@ -33,10 +33,22 @@
       %h3 Longest Streak
 
 .history
-  - answers_by_date(@user.answers).each do |date, answers|
+  - last_year = last_month = nil
+  - history(@user.answers).each_cons(2) do |(date, answers), (next_date, _)|
+    - if last_year != date.year || last_month != date.month
+      .row
+        .col-md-2.text-center= date.strftime('%Y %B')
+    - last_year, last_month = [date.year, date.month]
     .row.day
-      .col-md-2= date
+      .col-md-2.text-right= date.day
       %ul.answers.list-unstyled.col-md-10
         - answers.each do |answer|
           - question = @answered[answer.question_id]
           %li= link_to question.title, question.link
+    - if next_date && date.year != next_date.year
+      .row.gap
+        .col-md-4
+          %hr
+        .col-md-4.text-center= date_difference(next_date, date)
+        .col-md-4
+          %hr

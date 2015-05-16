@@ -35,6 +35,13 @@
   padding: 5px 0 5px;
 
   .answers {
-    border-left: 1px solid #CCC;
+    border-left: 1px solid #E3E3E3;
+  }
+}
+
+.gap {
+  hr {
+    border-color: #E3E3E3;
+    border-style: dashed;
   }
 }
