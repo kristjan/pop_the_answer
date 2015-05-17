@@ -40,8 +40,8 @@
         .col-md-2.text-center= date.strftime('%Y %B')
     - last_year, last_month = [date.year, date.month]
     .row.day
-      .col-md-2.text-right= date.day
-      %ul.answers.list-unstyled.col-md-10
+      .col-xs-2.text-right= date.day
+      %ul.answers.list-unstyled.col-xs-10
         - answers.each do |answer|
           - question = @answered[answer.question_id]
           %li= link_to question.title, question.link
