@@ -1,5 +1,30 @@
 module UsersHelper
   TIME_ZONE = 'Pacific Time (US & Canada)'
+
+  def accepted_class(answer, question)
+    case accepted_state(answer, question)
+    when :accepted then 'accepted'
+    when :none     then 'undecided'
+    else                'not-accepted'
+    end
+  end
+
+  def accepted_state(answer, question)
+    case question.accepted_answer_id
+    when answer.answer_id then :accepted
+    when nil              then :none
+    else                       :another
+    end
+  end
+
+  def accepted_title(answer, question)
+    case accepted_state(answer, question)
+    when :accepted then 'Answer was accepted!'
+    when :none     then 'No accepted answers yet.'
+    else                'Another answer was accepted.'
+    end
+  end
+
   def answer_dates(answers)
     answers.map do |answer|
       answer.creation_date.to_time.in_time_zone(TIME_ZONE).to_date

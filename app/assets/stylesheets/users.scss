@@ -39,6 +39,28 @@
   }
 }
 
+.answer p {
+  padding-left: 140px;
+}
+
+.stamp {
+  color: #333;
+  display: inline-block;
+  width: 30px;
+
+  .glyphicon {
+    color: #666;
+    width: 20px;
+  }
+  .number { font-size: 16px }
+
+  &.metric { width: 50px }
+
+  &.accepted     { color: #44B449; }
+  &.not-accepted { color: #FF9A4D }
+  &.undecided    { color: #EEE }
+}
+
 .gap {
   hr {
     border-color: #E3E3E3;

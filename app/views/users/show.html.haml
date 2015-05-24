@@ -44,7 +44,17 @@
       %ul.answers.list-unstyled.col-xs-10
         - answers.each do |answer|
           - question = @answered[answer.question_id]
-          %li= link_to question.title, question.link
+          %li.answer
+            .stamps.pull-left
+              %span.stamp.glyphicon.glyphicon-ok{title: accepted_title(answer, question),
+                                                class: accepted_class(answer, question)}
+              %span.stamp.metric{title: "Question received #{pluralize(question.score, 'vote')}"}
+                %span.stamp.glyphicon.glyphicon-question-sign
+                %span.number= question.score
+              %span.stamp.metric{title: "Answer received #{pluralize(answer.score, 'vote')}"}
+                %span.stamp.glyphicon.glyphicon-triangle-top
+                %span.number= answer.score
+            %p= link_to question.title, question.link
     - if next_date && date.year != next_date.year
       .row.gap
         .col-md-4
