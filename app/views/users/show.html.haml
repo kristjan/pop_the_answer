@@ -54,7 +54,7 @@
               %span.stamp.metric{title: "Answer received #{pluralize(answer.score, 'vote')}"}
                 %span.stamp.glyphicon.glyphicon-triangle-top
                 %span.number= answer.score
-            %p= link_to question.title, question.link
+            %p= link_to question.title.html_safe, question.link
     - if next_date && date.year != next_date.year
       .row.gap
         .col-md-4
