@@ -1,13 +1,5 @@
 .profile {
   h1, h2, h3 { margin: 10px 0; }
-  h2 {
-    font-size: 42px;
-
-    img {
-      height: 42px;
-      vertical-align: bottom;
-    }
-  }
 }
 
 .badges {
@@ -16,6 +8,26 @@
   .bronze span { color: #CC9966; }
   .silver span { color: #C5C5C5; }
   .gold   span { color: #FFCC00; }
+}
+
+.reputation {
+  font-size: 24px;
+
+  h2 {
+    font-size: 42px;
+
+    img {
+      height: 42px;
+      vertical-align: bottom;
+    }
+  }
+
+  .change {
+    color: #44B449;
+    display: inline-block;
+    margin-right: 5px;
+    width: 90px;
+  }
 }
 
 .summary {

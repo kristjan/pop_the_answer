@@ -1,19 +1,27 @@
 .row.jumbotron
   = image_tag @user.profile_image, alt: @user.display_name, class: 'col-xs-3'
-  .col-xs-9.text-right
+  .profile.col-md-3
+    %h1.row= link_to @user.display_name.html_safe, @user.link
+    %h3.row
+      %ul.badges.list-unstyled.list-inline
+        - @user.badge_counts.each do |color, count|
+          - next unless count > 0
+          %li{class: color}
+            %span &#9679;
+            #{count}
+  .reputation.col-md-4.col-md-offset-1
+    %h2.row
+      = image_tag 'https://sstatic.net/stackexchange/img/logos/so/so-icon.png'
+      = @user.reputation
     .row
-      .profile
-        %h1= link_to @user.display_name.html_safe, @user.link
-        %h2
-          = image_tag 'https://sstatic.net/stackexchange/img/logos/so/so-icon.png'
-          = @user.reputation
-        %h3
-          %ul.badges.list-unstyled.list-inline
-            - @user.badge_counts.each do |color, count|
-              - next unless count > 0
-              %li{class: color}
-                %span &#9679;
-                #{count}
+      %span.change +#{@user.reputation_change_day}
+      Today
+    .row
+      %span.change +#{@user.reputation_change_month}
+      This Month
+    .row
+      %span.change +#{@user.reputation_change_year}
+      This Year
 .row.summary.text-center
   .col-md-3
     .well.well-lg
