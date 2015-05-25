@@ -47,11 +47,13 @@
           %li.answer
             .stamps.pull-left
               %span.stamp.glyphicon.glyphicon-ok{title: accepted_title(answer, question),
-                                                class: accepted_class(answer, question)}
-              %span.stamp.metric{title: "Question received #{pluralize(question.score, 'vote')}"}
+                                                class:  accepted_class(answer, question)}
+              %span.stamp.metric{title: "Question received #{pluralize(question.score, 'vote')}",
+                                 class: ('empty' if question.score == 0)}
                 %span.stamp.glyphicon.glyphicon-question-sign
                 %span.number= question.score
-              %span.stamp.metric{title: "Answer received #{pluralize(answer.score, 'vote')}"}
+              %span.stamp.metric{title: "Answer received #{pluralize(answer.score, 'vote')}",
+                                 class: ('empty' if answer.score == 0)}
                 %span.stamp.glyphicon.glyphicon-triangle-top
                 %span.number= answer.score
             %p= link_to question.title.html_safe, question.link

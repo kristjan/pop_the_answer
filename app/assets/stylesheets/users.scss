@@ -54,11 +54,18 @@
   }
   .number { font-size: 16px }
 
-  &.metric { width: 50px }
 
-  &.accepted     { color: #44B449; }
+  &.accepted { color: #44B449; }
+  &.empty {
+    color: #EEE;
+
+    .glyphicon {
+      color: #EEE;
+    }
+  }
+  &.metric { width: 50px }
   &.not-accepted { color: #FF9A4D }
-  &.undecided    { color: #EEE }
+
 }
 
 .gap {

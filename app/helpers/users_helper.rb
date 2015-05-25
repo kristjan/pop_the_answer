@@ -4,7 +4,7 @@ module UsersHelper
   def accepted_class(answer, question)
     case accepted_state(answer, question)
     when :accepted then 'accepted'
-    when :none     then 'undecided'
+    when :none     then 'empty'
     else                'not-accepted'
     end
   end
