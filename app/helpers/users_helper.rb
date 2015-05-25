@@ -20,7 +20,7 @@ module UsersHelper
   def accepted_title(answer, question)
     case accepted_state(answer, question)
     when :accepted then 'Answer was accepted!'
-    when :none     then 'No accepted answers yet.'
+    when :none     then 'No accepted answer yet.'
     else                'Another answer was accepted.'
     end
   end

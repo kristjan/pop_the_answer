@@ -51,10 +51,6 @@
   }
 }
 
-.answer p {
-  padding-left: 140px;
-}
-
 .stamp {
   color: #333;
   display: inline-block;
@@ -64,7 +60,7 @@
     color: #666;
     width: 20px;
   }
-  .number { font-size: 16px }
+  .number { font-size: 12px }
 
 
   &.accepted { color: #44B449; }
@@ -75,7 +71,7 @@
       color: #EEE;
     }
   }
-  &.metric { width: 50px }
+  &.metric { width: 40px }
   &.not-accepted { color: #FF9A4D }
 
 }
